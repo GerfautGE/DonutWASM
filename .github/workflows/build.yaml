@@ -10,17 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v1
       - name: Install dependencies
-        run: apt install emcc make
-      - name: Build
+        run: apt-get install git make
+      - name: build emcc
+        run: git clone https://github.com/emscripten-core/emsdk.git && cd emsdk && ./emsdk install latest && ./emsdk activate latest
+      - name: build wasm
         run: make
-    deploy:
-      needs: build
-      provider: pages
-      skip_cleanup: true
-      github_token: ${{ secrets.GITHUB_TOKEN }}
-      keep_history: true
-      local_dir: dist
-      on:
-        branch: master
