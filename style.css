@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #292C33;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#output {
+    white-space: break-spaces;
+    /* Preserve formatting and line breaks */
+    font-family: monospace;
+    font-size: 10px;
+
+    border: #fff solid 1px;
+    border-radius: 2em;
+
+    width: fit-content;
+    margin: 1em auto 1em auto;
+}
+
+#sliders {
+    font-family: 'Fira Code', monospace;
+
+    transition: opacity 0.5s ease-in-out;
+    border: #fff solid 1px;
+    border-radius: 2em;
+    padding: 1em;
+
+    width: fit-content;
+    margin: 1em auto 1em auto;
+}
+
+h1{
+    font-family: 'Fira Code', monospace;
+}
+
+h2 {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.7em;
+}
