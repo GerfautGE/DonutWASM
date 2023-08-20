@@ -11,8 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install dependencies
-        run: sudo apt install git make
-      - name: build emcc
-        run: git clone https://github.com/emscripten-core/emsdk.git && cd emsdk && ./emsdk install latest && ./emsdk activate latest
+        run: sudo apt install emscripten git make
       - name: build wasm
         run: make
