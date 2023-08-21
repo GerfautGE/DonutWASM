@@ -1,44 +1,69 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #292C33;
-    color: #fff;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #292c33;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 #output {
-    white-space: break-spaces;
-    /* Preserve formatting and line breaks */
-    font-family: monospace;
-    font-size: 10px;
+  white-space: break-spaces;
+  /* Preserve formatting and line breaks */
+  font-family: monospace;
+  font-size: 10px;
 
-    border: #fff solid 1px;
-    border-radius: 2em;
+  border: #fff solid 1px;
+  border-radius: 2em;
 
-    width: fit-content;
-    margin: 1em auto 1em auto;
+  width: fit-content;
+  margin: 1em auto 1em auto;
+}
+
+/*Reduce font size for phones*/
+@media only screen and (max-width: 758px) {
+  #output {
+    font-size: 4px;
+  }
+}
+
+/*Reduce for even smaller devices*/
+@media only screen and (max-width: 324px) {
+  #output {
+    font-size: 3px;
+  }
+}
+
+#container {
+  display:inline;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  #container {
+    display: flex;
+  }
 }
 
 #sliders {
-    font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
 
-    transition: opacity 0.5s ease-in-out;
-    border: #fff solid 1px;
-    border-radius: 2em;
-    padding: 1em;
+  transition: opacity 0.5s ease-in-out;
+  border: #fff solid 1px;
+  border-radius: 2em;
+  padding: 1em;
 
-    width: fit-content;
-    margin: 1em auto 1em auto;
+  width: fit-content;
+  height: fit-content;
+  margin: 1em auto 1em auto;
 }
 
-h1{
-    font-family: 'Fira Code', monospace;
+h1 {
+  font-family: "Fira Code", monospace;
 }
 
 h2 {
-    font-family: 'Fira Code', monospace;
-    font-size: 0.7em;
+  font-family: "Fira Code", monospace;
+  font-size: 0.7em;
 }
